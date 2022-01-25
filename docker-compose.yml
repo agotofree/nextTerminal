@@ -3,7 +3,7 @@ services:
   guacd:
     image: dushixiang/guacd:1.3.0
     volumes:
-      - ./data:/usr/local/next-terminal/data
+      - /data:/usr/local/next-terminal/data
     restart:
           always
   next-terminal:
@@ -16,6 +16,6 @@ services:
       - "8080:8088"
     volumes:
       - /etc/localtime:/etc/localtime
-      - ./data:/usr/local/next-terminal/data
+      - /data:/usr/local/next-terminal/data
     restart:
       always
